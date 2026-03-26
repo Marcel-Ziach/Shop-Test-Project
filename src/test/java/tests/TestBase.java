@@ -26,19 +26,19 @@ public class TestBase {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--disable-search-engine-choice-screen");
-        chromeOptions.addArguments("--incognito");
+        //chromeOptions.addArguments("--incognito");
         chromeOptions.addArguments("--disable-application-cache");
 
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.addArguments("--start-maximized");
         edgeOptions.addArguments("--disable-search-engine-choice-screen");
-        edgeOptions.addArguments("--incognito");
+        //edgeOptions.addArguments("--incognito");
         edgeOptions.addArguments("--disable-application-cache");
 
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         firefoxOptions.addArguments("--start-maximized");
         firefoxOptions.addArguments("--disable-search-engine-choice-screen");
-        firefoxOptions.addArguments("--incognito");
+        //firefoxOptions.addArguments("--incognito");
         firefoxOptions.addArguments("--disable-application-cache");
 
         switch (browser.toLowerCase()) {
