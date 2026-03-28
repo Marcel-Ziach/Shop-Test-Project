@@ -18,18 +18,23 @@ public class MainPage {
     /*****Variables*****/
 
     private static final String expectedShopHeadingText = PropertiesReader.read("expectedShopHeadingText");
+    private static final String expectedMainPageTitle = PropertiesReader.read("expectedMainPageTitle");
 
     /*****Web-element Repository*****/
 
     @FindBy(xpath = "//h1[text()='Selenium Shop']")
-    private WebElement shopHeadingText;
+    private WebElement actualShopHeadingText;
 
     /*****Operations on Web-elements******/
 
     public String getExpectedShopHeadingText () { return expectedShopHeadingText; }
 
     public String getActualShopHeadingText () {
-        return shopHeadingText.getText();
+        return actualShopHeadingText.getText();
     }
+
+    public String getExpectedMainPageTitle() { return expectedMainPageTitle; }
+
+    public String getActualMainPageTitle() { return driver.getTitle(); }
 
 }
