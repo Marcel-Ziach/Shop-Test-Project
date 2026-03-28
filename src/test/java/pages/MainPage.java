@@ -19,6 +19,7 @@ public class MainPage {
 
     private static final String expectedShopHeadingText = PropertiesReader.read("expectedShopHeadingText");
     private static final String expectedMainPageTitle = PropertiesReader.read("expectedMainPageTitle");
+    private static final String expectedMainPageUrl = PropertiesReader.read("expectedMainPageUrl");
 
     /*****Web-element Repository*****/
 
@@ -36,5 +37,9 @@ public class MainPage {
     public String getExpectedMainPageTitle() { return expectedMainPageTitle; }
 
     public String getActualMainPageTitle() { return driver.getTitle(); }
+
+    public String getExpectedMainPageUrl() { return expectedMainPageUrl; }
+
+    public String getActualMainPageUrl() { return driver.getCurrentUrl(); }
 
 }

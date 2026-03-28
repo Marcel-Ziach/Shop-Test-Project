@@ -23,6 +23,14 @@ public class MainPageTest extends TestBase {
 
     }
 
+    @Test (priority = 20, enabled = true, description = "Checks whether the main page url is correct.")
+    public void mainPageUrlVerification() throws InterruptedException {
+
+        String expectedMainPageUrl = mainPage.getExpectedMainPageUrl();
+        Assert.assertEquals(mainPage.getActualMainPageUrl(), expectedMainPageUrl);
+
+    }
+
     @Test (priority = 30, enabled = true, description = "Checks visibility of an element on the main page as well as the correctness of the text.")
     public void checkShopHeadingTextIsDisplayedAndCorrect() throws InterruptedException {
 
