@@ -26,7 +26,12 @@ public class MainPage {
     @FindBy(xpath = "//h1[text()='Selenium Shop']")
     private WebElement actualShopHeadingText;
 
+    @FindBy(id = "menu-item-134")
+    private WebElement surveyButton;
+
     /*****Operations on Web-elements******/
+
+    public void surveyButtonClick () { surveyButton.click(); }
 
     public String getExpectedShopHeadingText () { return expectedShopHeadingText; }
 
