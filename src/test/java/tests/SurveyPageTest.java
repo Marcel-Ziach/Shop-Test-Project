@@ -20,10 +20,19 @@ public class SurveyPageTest extends TestBase {
         mainPage.surveyButtonClick();
     }
 
+    @Test(priority = 10, enabled = true, description = "Checks if the Survey Page title is correct.")
+    public void surveyPageTitleVerification() throws InterruptedException {
+
+        String expectedSurveyPageTitle = surveyPage.getExpectedSurveyPageTitle();
+        Assert.assertEquals(surveyPage.getActualSurveyPageTitle(), expectedSurveyPageTitle);
+
+    }
+
     @Test(priority = 30, enabled = true, description = "Checks if Survey Window is Displayed.")
     public void checkIfSurveyWindowIsDisplayed() throws InterruptedException {
 
         Assert.assertTrue(surveyPage.isSurveyWindowDisplayed(), "Page not loaded correctly. Survey Window is not Displayed.");
 
     }
+
 }

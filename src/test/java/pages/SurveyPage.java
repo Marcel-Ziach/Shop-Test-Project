@@ -15,6 +15,10 @@ public class SurveyPage {
         PageFactory.initElements(driver,this);
     }
 
+    /*****Variables*****/
+
+    private static final String expectedSurveyPageTitle = PropertiesReader.read("expectedSurveyPageTitle");
+
     /*****Web-element Repository*****/
 
     @FindBy(xpath = "//div[text()='Ankieta sprzedażowa']")
@@ -31,5 +35,9 @@ public class SurveyPage {
         }
         return status;
     }
+
+    public String getExpectedSurveyPageTitle() { return expectedSurveyPageTitle; }
+
+    public String getActualSurveyPageTitle() { return driver.getTitle(); }
 
 }
