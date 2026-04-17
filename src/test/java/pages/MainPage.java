@@ -29,6 +29,9 @@ public class MainPage {
     @FindBy(id = "menu-item-134")
     private WebElement surveyButton;
 
+    @FindBy(id = "menu-item-137")
+    private WebElement shopButton;
+
     /*****Operations on Web-elements******/
 
     public void surveyButtonClick () { surveyButton.click(); }
@@ -46,5 +49,7 @@ public class MainPage {
     public String getExpectedMainPageUrl() { return expectedMainPageUrl; }
 
     public String getActualMainPageUrl() { return driver.getCurrentUrl(); }
+
+    public void shopButtonClick () { shopButton.click(); }
 
 }
